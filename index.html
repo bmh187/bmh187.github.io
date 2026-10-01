@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brendan Higgins | Portfolio</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background-color: #f5f7fa;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+
+    nav {
+      background-color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      z-index: 10;
+    }
+
+    nav strong {
+      color: #8b0000;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: #374151;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #8b0000;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(135deg, #8b0000, #b22222);
+      color: white;
+      padding: 70px 8%;
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .headshot {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 8px;
+    }
+
+    .hero h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    /* Main Sections */
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    section {
+      background-color: white;
+      padding: 34px;
+      margin-bottom: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+
+    .section-title {
+      color: #8b0000;
+      margin-top: 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    /* Skills */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background-color: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 9px 15px;
+      font-weight: 600;
+    }
+
+    /* Projects */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px;
+      background-color: #fafafa;
+    }
+
+    .card h3 {
+      color: #8b0000;
+      margin-top: 0;
+    }
+
+    .reference {
+      display: inline-block;
+      margin-top: 8px;
+      color: #8b0000;
+      font-weight: bold;
+    }
+
+    /* Experience and Activities */
+
+    .item {
+      margin-bottom: 26px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item h3 {
+      margin-bottom: 2px;
+    }
+
+    .sub {
+      color: #6b7280;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    /* Footer */
+
+    footer {
+      text-align: center;
+      background-color: #20252b;
+      color: white;
+      padding: 25px;
+      margin-top: 20px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+
+  <nav>
+
+    <strong>Brendan Higgins</strong>
+
+    <div>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#activities">Activities</a>
+    </div>
+
+  </nav>
+
+
+  <!-- About / Header -->
+
+  <header>
+
+    <div class="hero">
+
+      <img
+        src="headshot.jpg"
+        alt="Professional headshot of Brendan Higgins"
+        class="headshot"
+      >
+
+      <div>
+
+        <h1>Brendan Higgins</h1>
+
+        <h2>
+          Rutgers Business School Student | Marketing
+        </h2>
+
+        <p>
+          Rutgers Business School student studying Marketing with experience
+          in sales, marketing, channel development, and customer communication.
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills">
+
+        <span class="skill">Communication</span>
+
+        <span class="skill">Sales</span>
+
+        <span class="skill">Marketing</span>
+
+        <span class="skill">Microsoft Excel</span>
+
+        <span class="skill">Data Analysis</span>
+
+        <span class="skill">CRM &amp; Lead Generation</span>
+
+        <span class="skill">Teamwork</span>
+
+        <span class="skill">Problem Solving</span>
+
+        <span class="skill">Customer Service</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects">
+
+
+        <!-- Project 1 -->
+
+        <div class="card">
+
+          <h3>
+            PRIME Hydration Youth Sports Sponsorship Program
+          </h3>
+
+          <p>
+            Supported youth sports partnerships and channel development by
+            communicating with prospective organizations, explaining the
+            sponsorship program, answering questions, and assisting interested
+            partners throughout the process.
+          </p>
+
+          <span class="reference">
+            Professional Internship Project
+          </span>
+
+        </div>
+
+
+        <!-- Project 2 -->
+
+        <div class="card">
+
+          <h3>
+            Youth Sports Market Research &amp; CRM Lead Development
+          </h3>
+
+          <p>
+            Conducted market research to identify and qualify youth sports
+            organizations for potential partnerships. Researched organization
+            and contact information, verified lead quality, prevented duplicate
+            entries, and prepared organized prospect data for CRM outreach.
+          </p>
+
+          <span class="reference">
+            Market Research &amp; Lead Generation Project
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- Experience -->
+
+    <section id="experience">
+
+      <h2 class="section-title">Experience</h2>
+
+
+      <div class="item">
+
+        <h3>PRIME Hydration</h3>
+
+        <p class="sub">
+          Channel Development Intern
+        </p>
+
+        <p>
+          Gained hands-on experience in sales, marketing, lead generation,
+          partner outreach, CRM research, and customer communication while
+          supporting youth sports partnerships.
+        </p>
+
+      </div>
+
+
+      <div class="item">
+
+        <h3>Restaurant Backwaiter</h3>
+
+        <p class="sub">
+          Hospitality Experience
+        </p>
+
+        <p>
+          Worked in a fast-paced restaurant environment while strengthening
+          customer service, communication, teamwork, organization, and
+          time-management skills.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- Activities -->
+
+    <section id="activities">
+
+      <h2 class="section-title">Activities</h2>
+
+
+      <div class="item">
+
+        <h3>
+          Future Business Leaders of America (FBLA)
+        </h3>
+
+        <p class="sub">
+          Member | Rutgers University–Newark
+        </p>
+
+        <p>
+          Member of FBLA at Rutgers University–Newark, participating in
+          opportunities focused on professional development, networking,
+          and building business skills.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>
+      Brendan Higgins | Personal Portfolio
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
